@@ -40,7 +40,20 @@ var getMovie = function (movieName) {
 };
 
 
+var getConcert = function (artistName){
+    request("https://rest.bandsintown.com/artists/" + artistName + "/events?app_id=codingbootcamp", function (error, response, body){
+    var eventsArray = JSON.parse(body)
+        for (i = 0; i < eventsArray.length; i++) {
+            console.log('Venue Name: '+ eventsArray[i].venue.name)
+            console.log('Date: '+ eventsArray[i].datetime)
+            console.log('Location: '+ eventsArray[i].venue.city)
+            console.log('___________________________________')
+        }
+        
 
+    } )
+    
+}
 
 
 
@@ -71,9 +84,15 @@ if (command === 'spotify-this-song') {
 
 } 
 else if (command === "movie-this"){
-    console.log('this is executed')
     if (!userInput) {
         userInput = "Mr. Nobody"
     }
     getMovie(userInput)
+
 };
+if (command === "concert-this") {
+    if (!userInput) {
+        userInput = "Green Day"
+    } else {
+     getConcert(userInput);
+    }}
