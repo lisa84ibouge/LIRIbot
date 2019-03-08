@@ -88,11 +88,11 @@ else if (command === "movie-this"){
         userInput = "Mr. Nobody"
     }
     getMovie(userInput)
+}
 
-};
 if (command === "concert-this") {
     if (!userInput) {
-        userInput = "Green Day"
-    } else {
+        userInput = "Beck"
+    } 
      getConcert(userInput);
-    }}
+    }
