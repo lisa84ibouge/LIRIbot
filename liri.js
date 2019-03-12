@@ -3,7 +3,7 @@ var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 var request = require('request');
-
+var fs = require('fs');
 
 var command = process.argv[2];
 var userInput = process.argv[3];
@@ -56,7 +56,7 @@ var getConcert = function (artistName){
 }
 
 
-
+pick = function(command, userInput)  {
 
 if (command === 'spotify-this-song') {
     if (!userInput) {
@@ -96,3 +96,18 @@ if (command === "concert-this") {
     } 
      getConcert(userInput);
     }
+if (command === "do-what-it-says"){
+  fs.readFile('random.txt', 'utf8', function (err, data){
+
+      if (err) throw err;
+
+      var dataArr = data.split(',');
+        console.log(dataArr[0]);
+      if (dataArr.length == 2) {
+          pick(dataArr[0], dataArr[1]);
+      } else if (dataArr.length == 1){
+          pick(dataArr[0]);
+      }
+  });
+}}
+pick(command, userInput);
