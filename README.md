@@ -1,7 +1,18 @@
 # LIRIbot
 Music LIRI Bot
 
-The Music LIRI Bot is a JavaScript application that runs different commands using mutiple APIs. The APIs utilized for this applicaiton are Spotify, OMDB and BandsinTown. 
+The Music LIRI Bot is a JavaScript node application that runs different commands using mutiple APIs. The APIs utilized for this application are Spotify, OMDB and BandsinTown. 
+
+This project was developed to practice and demonstrate the use of mutliple AJAX calls on a node server for the University of Washington Coding Bootcamp in 2019. The program can be run by loading the liri.js file and doing each command one at a time as described below. The proper use of syntax and quotations are required for the commands to run successfully. Lastly, the following NPM packages will need to be installed in the directory: 
+
+NPM Packages to Install: 
+
+- Request module package
+- FS module package
+- Spotify module package
+- Node JS module 
+
+Instructions and Description of CLI Application
 
 The "concert-this" command allows you to search for different concerts by typing in the following full command => node liri.js "concert-this" [your concert artist here]
 
