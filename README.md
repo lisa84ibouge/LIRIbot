@@ -1,6 +1,8 @@
 # LIRIbot
 Music LIRI Bot
 
+The Music LIRI Bot is a JavaScript application that runs different commands using mutiple APIs. The APIs utilized for this applicaiton are Spotify, OMDB and BandsinTown. 
+
 The "concert-this" command allows you to search for different concerts by typing in the following full command => node liri.js "concert-this" [your concert artist here]
 
 
