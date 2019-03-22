@@ -7,10 +7,10 @@ This project was developed to practice and demonstrate the use of mutliple AJAX 
 
 NPM Packages to Install: 
 
-- Request module package
-- FS module package
-- Spotify module package
-- Node JS module 
+- Request
+- FileSystem (FS) 
+- Spotify 
+
 
 Instructions and Description of CLI Application
 
